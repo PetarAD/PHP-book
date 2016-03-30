@@ -1,11 +1,14 @@
 body{
-  background-color: green;
+  background-color: rgba(239, 241, 239, 0.19)
 }
-h1{
-  color:blue;
-  background-color: yellow;
+h1 {
+	font-family: 'Copperplate Gothic Light';
+	font-size: 41px;
+	font-style: oblique;
+	font-variant: normal;
+	font-weight: bold;
+	line-height: 45.1px;
   text-align: center;
-  border: 2px solid black;
 }
 h2{
   color:blue;
@@ -19,10 +22,49 @@ footer{
   width: 100%;
 }
 form{
-  background-color: pink;
-  width: 50%;
-  height: 50%;
+  background-color: rgb(205, 232, 205);
+  width: 30%;
+  height: 30%;
   position: absolute;;
-  right: 25%;
+  right: 35%;
 border: 1px solid black;
+}
+input{
+  padding: 10px;
+  border: solid 5px #c9c9c9;
+  box-shadow: inset 0 0 0 1px #707070;
+  transition: box-shadow 0.3s, border 0.3s;
+  text-align: center;
+}
+label{
+  margin: 5px;
+  padding: 5px;
+  font-size: 30px;
+  color: black;
+}
+#button{
+  font-size: 20px;
+  border-style: outset ;
+  position: absolute;
+  left: 25%;
+  bottom: 10%;
+}
+#button:hover{
+  border-style: inset;
+}
+a{
+  border: solid 5px #c9c9c9;
+  text-decoration: none;
+  background-color: buttonface;
+  color: black;
+  font-size: 20px;
+  border-style: outset ;
+  position: absolute;
+  right:  25%;
+  bottom: 10%;
+  padding: 10px;
+text-align: center;
+}
+a:hover{
+  border-style: inset;
 }
