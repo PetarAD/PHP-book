@@ -10,7 +10,7 @@
   if (isset($_POST['submit'])) {
     $username=$_POST['username'];
     $password=$_POST['password'];
-  }
+
   $conn = mysqli_connect('localhost', 'root', '', 'php_book');
   $read_query = 	"SELECT * FROM `user_info`";
   $read_result = mysqli_query($conn, $read_query);
@@ -31,6 +31,7 @@
 
   }
   }
+}
      ?>
         <header>
           <h1>

@@ -31,16 +31,16 @@
       <input type="submit" name="submit" value="Register" id="button">
     </form>
     <?php
-    if (isset($_POST['submit'])) {
+    $conn = mysqli_connect('localhost', 'root', '', 'php_book');
+    if (!empty($_POST['submit'])) {
       $username=$_POST['username'];
       $password=$_POST['password'];
       $mail=$_POST['mail'];
       $name=$_POST['Name'];
       $last=$_POST['Last'];
-    }
-    $conn = mysqli_connect('localhost', 'root', '', 'php_book');
-    $insert_query = 	"INSERT INTO user_info( username, password, email, first_name, last_name ) VALUES ('$username','$password','$mail','$name','$last' )";
 
+
+    $insert_query ="INSERT INTO user_info( username, password, email, first_name, last_name ) VALUES ('$username','$password','$mail','$name','$last' )";
         $insert_result= mysqli_query($conn, $insert_query);
         if ($insert_result) {
           echo "Успешно добавихте се регистрирахте!";
@@ -48,6 +48,8 @@
         }else{
           echo "Неуспешна регистрация";
         }
+
+      }
      ?>
   </body>
 </html>
